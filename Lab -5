@@ -1,0 +1,87 @@
+interface SmartDevice {
+    void turnOn();
+    void turnOff();
+}
+
+// Smart Fan class
+class SmartFan implements SmartDevice {
+
+    @Override
+    public void turnOn() {
+        System.out.println("Smart Fan is turned ON");
+    }
+
+    @Override
+    public void turnOff() {
+        System.out.println("Smart Fan is turned OFF");
+    }
+
+    public void setSpeed(int speed) {
+        System.out.println("Smart Fan speed set to " + speed);
+    }
+}
+
+// Smart Light class
+class SmartLight implements SmartDevice {
+
+    @Override
+    public void turnOn() {
+        System.out.println("Smart Light is turned ON");
+    }
+
+    @Override
+    public void turnOff() {
+        System.out.println("Smart Light is turned OFF");
+    }
+
+    public void setBrightness(int level) {
+        System.out.println("Smart Light brightness set to " + level);
+    }
+}
+
+// Smart AC class
+class SmartAC implements SmartDevice {
+
+    @Override
+    public void turnOn() {
+        System.out.println("Smart AC is turned ON");
+    }
+
+    @Override
+    public void turnOff() {
+        System.out.println("Smart AC is turned OFF");
+    }
+
+    public void setTemperature(int temperature) {
+        System.out.println("Smart AC temperature set to " + temperature + "°C");
+    }
+}
+
+// Main class
+public class SmartHomeDemo {
+
+    public static void main(String[] args) {
+
+        // Interface reference
+        SmartDevice device;
+
+        // Smart Fan
+        device = new SmartFan();
+        device.turnOn();
+        device.turnOff();
+
+        System.out.println();
+
+        // Smart Light
+        device = new SmartLight();
+        device.turnOn();
+        device.turnOff();
+
+        System.out.println();
+
+        // Smart AC
+        device = new SmartAC();
+        device.turnOn();
+        device.turnOff();
+    }
+}
